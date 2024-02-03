@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Events</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="img/bms.jpg" type="image/x-icon" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lato:wght@300&display=swap" rel="stylesheet">
+<!-- Bold Font  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lato:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    body{
+            background-image: url(https://source.unsplash.com/1366x768/?events,);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Lato', sans-serif;
+            /* margin: 0;
+            padding: 0; */
+        }
+        
+</style>
+
+</head>
+<body>
+    <div id="Tickets" class="glass_effect">
+            
+        <div id="Items">
+            <form action="Film.php" method="POST">
+
+            <h2>Book Events</h2>
+            <div>
+                <h3> Select Event </h3>
+                <select name="Event">
+                    <option  name="Sooryavanshi"> Sooryavanshi </option>
+                    <option  name="Resident Evil"> Resident Evil </option>
+                    <option  name="Pandu" > Pandu </option>
+                    <option  name="Tadap"> Tadap </option>
+                    <option  name="Antim : The Final Truth"> Antim : The Final Truth </option>
+                </select>
+            </div>
+             <div>
+                <h3> How many tickets? </h3>
+                <input name="Seats" id="seats" type="number" placeholder="Seats" min="1" max="3">
+            </div> 
+            <div>
+                <h3> Choose Ticket type </h3>
+                <select name="Ticket_type">
+                    <option  name="Gold"> Gold </option>
+                    <option  name="Silver"> Silver </option>
+                    <option  name="Bronze" > Bronze </option>
+                </select>
+            </div>
+            <input class="btn" type="submit" value="Book Events">
+
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

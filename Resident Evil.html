@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="shortcut icon" href="img/bms.jpg" type="image/x-icon" />
+</head>
+<style>
+    body{
+            background-image: url(https://source.unsplash.com/1366x768/?theater,);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Lato', sans-serif;
+            /* margin: 0;
+            padding: 0; */
+        }
+    header{
+    border: solid red 2px;
+    color: white;
+    background-color: #303644;
+    border-radius: 10px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    width: 98%;
+    margin: 10px 0px;
+    
+    }
+    p{
+        font-size: 21px;
+    }
+    #Tickets{
+    height: 623px;
+    width: 86%;
+    display: block;
+    padding: 0px 0px;
+    margin: 0px 122px;
+    border-radius: 20px;
+    position: relative;
+    top: 35px;
+    left: 0px;
+    border: solid 2px red;
+    
+    
+  }
+  #Tickets h2{
+    background-color: #fff;
+    color: rgb(248, 68, 100);
+    display: inline-block;
+    font-size: 31px;
+    padding: 10px 215px;
+  
+  }
+  #Items{
+    position: relative;
+    top: 50px;
+    left: 250px;
+    height: 90%;
+    background-color: #fff;
+    display: flex;
+    width: 56%;
+    border-radius: 15px;
+    justify-content: center;
+  }
+  .glass_effect{
+    background: linear-gradient(135deg, rgba(255 ,255 ,255 ,0.1), rgb(43 49 72));
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+  
+      border-radius: 12px 12px 12px 12px;
+      font-family: 'Lato', sans-serif;
+  }
+  .glass_effect:hover{
+    background: linear-gradient(135deg, rgba(255 ,255 ,255 ,0.1), rgb(238 67 100));
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+  
+      border-radius: 12px 12px 12px 12px;
+      font-family: 'Lato', sans-serif;
+  }
+  
+  .btn{
+    
+      background-color: #fff;
+      position: relative;
+      left: -40px;
+      color: rgb(248, 68, 100);
+      border: 2px solid rgb(248, 68, 100);
+      transition: background-color 0.6s ease-in-out;
+      font-size: 24px;
+      border-radius: 10px;
+      padding: 10px 16px;
+        margin: 7px 150px;
+        position: relative;
+        left: 56px;
+        top: 42px;
+        width: 40%;
+      }
+  .btn:hover{
+              border-color: rgb(248, 68, 100);
+              color: white;
+              background-color: rgb(248, 68, 100);
+      
+            }
+            form div{
+                text-align: center;
+                font-size: 15px;
+                margin: 0px 0px;
+                padding: 10px 0px;
+                width: auto;
+                position: relative;
+                top: 0px 0px;
+                left: 0px 0px;
+            }
+            button{
+                margin: 0px 7px;
+                padding: 10px 5px;
+                background-color: white;
+                font-size: 14px;
+                border: solid red 2px;
+                border-radius: 5px;
+                transition: ease 0.5s;
+            }
+            button:hover{
+                margin: 0px 7px;
+                padding: 10px 5px;
+                color: white;
+                background-color: rgb(255, 0, 0);
+                font-size: 14px;
+                border: solid rgb(245, 238, 238) 2px;
+                border-radius: 15px;
+            }
+            select {
+                font-size: 15px;
+                border-radius: 9px;
+                border: solid rgb(248, 68, 100) 2px;
+                padding: 5px 30px;
+                margin: 5px 150px;
+                transition: ease 0.6s;
+            }
+            #seats{
+                font-size: 15px;
+                border-radius: 9px;
+                border: solid rgb(248, 68, 100) 2px;
+                padding: 5px 30px;
+                margin: 5px 150px;
+                transition: ease 0.6s;
+            }
+</style>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            
+           <p align="center"> Film : Resident Evil (2D) English U/A </p>
+
+        </nav>
+    </header>
+
+
+    <div id="Tickets" class="glass_effect">
+            
+        <div id="Items">
+            <form action="Date_Time.php" method="POST">
+
+            <h2>Date and Time</h2>
+            
+            <div>
+                <h3> Day Date </h3>
+                <select name="Day_Date">
+                    <option  name="Thursday">16 Dec, Thursday</option>
+                    <option  name="Friday">17 Dec, Friday</option>
+                    <option  name="Saturday">18 Dec, Saturday</option>
+                    
+                </select>
+                
+            </div>
+            <div>
+                <h3> Time </h3>
+                <select name="Time">
+                    <option  name="Time1">08:15 AM</option>
+                    <option  name="Time2">02:00 PM</option>
+                    <option  name="Time3">06:30 PM</option>
+                    <option  name="Time4">10:45 PM</option>
+                </select>
+                
+            </div> 
+            <input class="btn" type="submit" value="Proceed to Payment">
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

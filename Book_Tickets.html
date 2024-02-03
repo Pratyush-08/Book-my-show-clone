@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="img/bms.jpg" type="image/x-icon" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lato:wght@300&display=swap" rel="stylesheet">
+<!-- Bold Font  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lato:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    body{
+            background-image: url(https://source.unsplash.com/1366x768/?theater,);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Lato', sans-serif;
+            /* margin: 0;
+            padding: 0; */
+        }
+        
+</style>
+<script>
+    function disableElement() {
+  document.getElementById("English").disabled = true;
+}
+// onclick="disableElement()  
+</script>
+</head>
+<body>
+    <div id="Tickets" class="glass_effect">
+            
+        <div id="Items">
+            <form action="Film.php" method="POST">
+
+            <h2>Book Tickets</h2>
+            <div>
+                <h3> Select Movie </h3>
+                <select name="Film" id="slct1" onchange="work(this.id,'slct2')" required>
+                    <option value="">Choose Film </option>
+                    <option value="Sooryavanshi"  name="Sooryavanshi"> Sooryavanshi </option>
+                    <option value="Resident Evil"  name="Resident Evil"> Resident Evil </option>
+                    <option value="Pandu" name="Pandu" > Pandu </option>
+                    <option value="Tadap"  name="Tadap"> Tadap </option>
+                    <option value="Antim : The Final Truth" name="Antim : The Final Truth"> Antim : The Final Truth </option>
+                </select>
+                <div class="f-group">
+                    <h3>Ticket Type and Price</h3>
+                    <select name="slct2" id="slct2">
+        
+                    </select>
+                </div>
+            </div>
+             <div>
+                <h3> How many seats? </h3>
+                <input name="Seats" id="seats" type="number" placeholder="Seats" min="1" max="10">
+            </div> 
+            
+            
+            <input class="btn" type="submit" value="Book Tickets">
+
+            </form>
+        </div>
+
+    </div>
+    <script>
+
+        function work(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+
+            s2.innerHTML = "";
+
+            if(s1.value == "Sooryavanshi"){
+                var optionArray = ['gold|Gold - &#8377;230','silver|Silver - &#8377;200','bronze|Bronze - &#8377;170',];
+            }
+            else if(s1.value == "Resident Evil"){
+                var optionArray = ['gold|Gold - &#8377;250','silver|Silver - &#8377;220','bronze|Bronze - &#8377;180',];
+            }
+            else if(s1.value == "Pandu"){
+                var optionArray = ['gold|Gold - &#8377;210','silver|Silver - &#8377;180','bronze|Bronze - &#8377;150',];
+            }
+            else if(s1.value == "Tadap"){
+                var optionArray = ['gold|Gold - &#8377;340','silver|Silver - &#8377;300','bronze|Bronze - &#8377;270',];
+            }
+            else if(s1.value == "Antim : The Final Truth"){
+                var optionArray = ['gold|Gold - &#8377;150','silver|Silver - &#8377;120','bronze|Bronze - &#8377;100',];
+            }
+
+
+            for(var option in optionArray){
+
+                var pair = optionArray[option].split("|");
+                var newoption = document.createElement("option");
+
+                newoption.value = pair[0];
+                newoption.innerHTML = pair[1];
+                s2.options.add(newoption);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="img/bms.jpg" type="image/x-icon" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lato:wght@300&display=swap" rel="stylesheet">
+<!-- Bold Font  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lato:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    body{
+            background-image: url(https://source.unsplash.com/1366x768/?theater,);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Lato', sans-serif;
+            /* margin: 0;
+            padding: 0; */
+        }
+        
+</style>
+<script>
+    function disableElement() {
+  document.getElementById("English").disabled = true;
+}
+// onclick="disableElement()  
+</script>
+</head>
+<body>
+    <div id="Tickets" class="glass_effect">
+            
+        <div id="Items">
+            <form action="Film.php" method="POST">
+
+            <h2>Book Tickets</h2>
+            <div>
+                <h3> Select Movie </h3>
+                <select name="Film">
+                    <option  name="Tadap"> Tadap </option>
+                    
+                </select>
+            </div>
+            <div>
+                <h3> Choose Ticket type </h3>
+                <select name="slct2" id="slct2">
+                    <option  value="gold" > Gold &nbsp; &#8377;340</option>
+                    <option  value="silver" > Silver &nbsp; &#8377;300 </option>
+                    <option  value="bronze" > Bronze &nbsp; &#8377;270 </option>
+                </select>
+            </div>
+             <div>
+                <h3> How many seats? </h3>
+                <input name="Seats" id="seats" type="number" placeholder="Seats" min="1" max="10">
+            </div> 
+            
+            <input class="btn" type="submit" value="Book Tickets">
+
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
